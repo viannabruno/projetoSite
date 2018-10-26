@@ -1,0 +1,98 @@
+h1 {
+    -webkit-animation: aparece 2s ease-out;
+    animation: aparece 2s ease-out;
+}
+@-webkit-keyframes aparece {
+    0%{
+      opacity: 0;  
+    } 
+    100%{
+      opacity: 1;  
+    }
+}
+@keyframes aparece {
+    0%{
+      opacity: 0;  
+    } 
+    100%{
+      opacity: 1;  
+    }
+}
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 30ch;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 4px black,
+            0 0 0 8px #851944,
+            0 0 0 12px black,
+            0 0 0 16px #851944,
+            0 0 0 20px black;
+    transition: transform 1s linear, box-shadow 1s ease-in-out;
+    transition-delay: 0s, 1s;
+}
+
+
+.citacao-bio:nth-of-type(odd){
+    float: right;
+    margin-left: 2rem;
+}
+.citacao-bio:nth-of-type(even){
+    float: left;
+    margin-right: 2rem;
+}
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.7);
+    transition-delay: 0s, 1s;
+}
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2);
+}
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) ;
+}
+
+.citacao-bio::before {
+    content: '"';
+    font-size: 10em;
+    position: absolute;
+    line-height: .8;
+    color: #bbb;
+}
+.citacao-bio > p {
+    position: relative;
+}
+.habilidades th {
+    font-weight: bold;
+    background-color: #851944;
+    color: white;
+}
+.habilidades thead th {
+  /* não precisamos colocar font-weight e color
+     pois já fizemos isso para todos os th */
+    background-color: #3C1D3D;
+}
+.habilidades td {
+    background-color: #EEE;
+}
+.habilidades th,
+.habilidades td {
+    padding: 1em;
+}
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
+}
+.habilidades [colspan] {
+    text-align: center;
+    
+}
+.habilidades [rowspan] {
+    vertical-align: middle;
+}

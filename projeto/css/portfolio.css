@@ -1,0 +1,26 @@
+.portfolio li {
+   /* display: inline-block;  no lugar vamos usar flexbox ad display:flex e flex-wrap: wrap no protifolio*/
+    border: .5rem solid black;
+    background-color: #FAFFFC;
+    width: 45%;
+    box-sizing: border-box;
+    padding: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 5px  #000;
+    flex: 1 1 45%;
+}
+
+.portfolio img {
+    width: 100%;
+    box-shadow: 0 0 4px  #000;
+}
+.portfolio li:first-child {
+    width: 100%;
+    flex-basis: 100%;
+    
+}
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
